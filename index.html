@@ -256,6 +256,12 @@
   .testi{margin:30px auto 0;max-width:60ch;text-align:center;border-top:1px solid var(--hair);padding-top:24px}
   .testi p{font-family:"Fraunces",serif;font-size:20px;font-style:italic;color:var(--ink);margin:0}
   .testi cite{display:block;margin-top:10px;font-size:14px;color:var(--muted);font-style:normal}
+  .testimonial{max-width:860px;margin:0 auto;background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:clamp(30px,5vw,54px) clamp(22px,5vw,56px);text-align:center}
+  .testimonial .eyebrow{margin-bottom:20px}
+  .tquote{margin:0;position:relative}
+  .tquote .qmark{font-family:"Fraunces",serif;font-size:64px;line-height:.5;color:var(--accent);opacity:.4;display:block;margin-bottom:6px}
+  .tquote p{font-family:"Fraunces",serif;font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,26px);line-height:1.5;color:var(--ink);margin:0 auto;max-width:46ch}
+  .tquote cite{display:block;margin-top:24px;font-style:normal;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
   .idea-style{margin-top:16px;font-size:15px;color:var(--ink);max-width:62ch;border-left:2px solid var(--accent);padding-left:14px}
   .next-cols{display:grid;grid-template-columns:1fr;gap:28px;margin-top:6px}
   .next-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
@@ -419,6 +425,16 @@
   <p class="pkg-note pkg-paid" data-t="pkg.paid"></p>
 </section>
 
+<!-- TESTIMONIAL -->
+<section class="wrap testimonial">
+  <p class="eyebrow" data-t="testi.eyebrow"></p>
+  <blockquote class="tquote">
+    <span class="qmark" aria-hidden="true">&#8220;</span>
+    <p data-t="testi.quote"></p>
+    <cite>&#8212; <span data-t="testi.by"></span></cite>
+  </blockquote>
+</section>
+
 <!-- CLOSE -->
 <section class="wrap close" id="contact">
   <h2 data-t="close.title"></h2>
@@ -532,6 +548,9 @@ const T = {
     "get.3":"Fechas que se acomoden a ustedes, porque nuestro calendario es flexible",
     "video.h":"Y tal vez video",
     "video.p":"El video no entra en el trato por defecto. Si la colaboración de fotos sale bien para ambos y se siente bien, con gusto hablamos de filmar algo juntos después.",
+    "testi.eyebrow":"LO QUE DIJO NUESTRO ANFITRIÓN",
+    "testi.quote":"El servicio de fotografía que realizaron para nuestras cabañas y apartamentos fue absolutamente espectacular, trabajando con total autonomía, profesionalismo y gran eficiencia. Se nota que Réka y Dávid tienen amplia experiencia en el rubro, ya que el resultado final no decepcionó en lo más mínimo. ¡Recomiendo su trabajo de todo corazón a cualquiera que quiera elevar la presentación de su propiedad!",
+    "testi.by":"Patagonia Villa, Ushuaia",
     "close.title":"¿Quieren crear algo juntos?",
     "close.p":"Escríbannos. Sin compromiso, solo una charla.",
     "close.email":"Escríbannos",
@@ -627,6 +646,9 @@ const T = {
     "get.3":"Dates that work around you, since our schedule is flexible",
     "video.h":"And maybe video",
     "video.p":"Video isn\u2019t part of the trade by default. If the photo collaboration goes well for both of us and it feels right, we\u2019re happy to talk about filming something together afterwards.",
+    "testi.eyebrow":"WHAT OUR HOST SAID",
+    "testi.quote":"The photography service provided for our cabins and apartments was absolutely spectacular, operating with total autonomy, professionalism, and high efficiency. It is clear that Réka and Dávid have extensive industry experience, as the final results did not disappoint in the slightest. I completely and wholeheartedly recommend their work to anyone looking to elevate their property listings!",
+    "testi.by":"Patagonia Villa, Ushuaia",
     "close.title":"Want to create something together?",
     "close.p":"Write to us. No obligations, just a conversation.",
     "close.email":"Email us",
