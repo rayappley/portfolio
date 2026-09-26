@@ -248,6 +248,19 @@
   .feat-grid.feat-grid-lg{grid-template-columns:repeat(5,1fr)}
   @media (max-width:900px){ .feat-grid.feat-grid-lg{grid-template-columns:repeat(3,1fr)} }
   @media (max-width:520px){ .feat-grid.feat-grid-lg{grid-template-columns:repeat(2,1fr)} }
+  .gviewer{margin-top:0}
+  .gv-main{position:relative;width:100%;aspect-ratio:3/2;background:var(--surface-2);border:1px solid var(--hair);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .gv-img{width:100%;height:100%;object-fit:contain;display:block;cursor:zoom-in}
+  .gv-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(12,18,22,.55);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;transition:background .15s}
+  .gv-arrow:hover{background:rgba(12,18,22,.82)}
+  .gv-prev{left:12px}
+  .gv-next{right:12px}
+  .gv-thumbs{margin-top:10px}
+  .gv-thumb{padding:0;margin:0;border:2px solid transparent;border-radius:5px;overflow:hidden;cursor:pointer;background:var(--surface-2);aspect-ratio:1/1;opacity:.7;transition:opacity .15s,border-color .15s}
+  .gv-thumb:hover{opacity:1}
+  .gv-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .gv-thumb.is-active{opacity:1;border-color:var(--accent)}
+  @media (max-width:520px){ .gv-main{aspect-ratio:4/5} }
   @media (max-width:760px){ .work-cards{grid-template-columns:1fr} }
   .feat-sub{font-family:"Fraunces",serif;font-weight:600;font-size:19px;margin:34px 0 6px}
   .feat-tap{font-size:13px;color:var(--muted);margin:0 0 14px}
@@ -390,6 +403,21 @@
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
+<section class="wrap">
+  <div class="sechead">
+    <p class="eyebrow" data-t="how.eyebrow"></p>
+    <h2 data-t="how.title"></h2>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="num" data-t="how.1.n"></span><h3 data-t="how.1.h"></h3><p data-t="how.1.p"></p></div>
+    <div class="step"><span class="num" data-t="how.2.n"></span><h3 data-t="how.2.h"></h3><p data-t="how.2.p"></p></div>
+    <div class="step"><span class="num" data-t="how.3.n"></span><h3 data-t="how.3.h"></h3><p data-t="how.3.p"></p></div>
+  </div>
+  <p class="pkg-note" data-t="pkg.note"></p>
+  <p class="pkg-note pkg-paid" data-t="pkg.paid"></p>
+</section>
+
 <!-- NEXT -->
 <section class="wrap">
   <div class="sechead">
@@ -408,21 +436,6 @@
       <ul class="next-list"><li data-t="next.stayed.1"></li></ul>
     </div>
   </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="wrap">
-  <div class="sechead">
-    <p class="eyebrow" data-t="how.eyebrow"></p>
-    <h2 data-t="how.title"></h2>
-  </div>
-  <div class="steps">
-    <div class="step"><span class="num" data-t="how.1.n"></span><h3 data-t="how.1.h"></h3><p data-t="how.1.p"></p></div>
-    <div class="step"><span class="num" data-t="how.2.n"></span><h3 data-t="how.2.h"></h3><p data-t="how.2.p"></p></div>
-    <div class="step"><span class="num" data-t="how.3.n"></span><h3 data-t="how.3.h"></h3><p data-t="how.3.p"></p></div>
-  </div>
-  <p class="pkg-note" data-t="pkg.note"></p>
-  <p class="pkg-note pkg-paid" data-t="pkg.paid"></p>
 </section>
 
 <!-- TESTIMONIAL -->
@@ -465,28 +478,35 @@
     </div>
     <h3 class="feat-sub" data-t="feat.gallery.h"></h3>
     <p class="feat-tap" data-t="feat.gallery.tap"></p>
-        <div class="feat-grid feat-grid-lg">
-      <figure class="g-item" data-id="cab-01"><img src="images/cabin-03.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-02"><img src="images/cabin-02.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-03"><img src="images/cabin-01.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-04"><img src="images/cabin-07.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-05"><img src="images/cabin-08.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-06"><img src="images/cabin-06.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-07"><img src="images/cabin-18.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-08"><img src="images/cabin-10.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-09"><img src="images/cabin-11.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-10"><img src="images/cabin-09.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-11"><img src="images/cabin-05.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-12"><img src="images/cabin-04.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-13"><img src="images/cabin-12.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-14"><img src="images/cabin-15.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-15"><img src="images/cabin-19.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-16"><img src="images/cabin-13.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-17"><img src="images/cabin-14.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-18"><img src="images/cabin-20.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-19"><img src="images/cabin-16.jpg" alt=""></figure>
-      <figure class="g-item" data-id="cab-20"><img src="images/cabin-17.jpg" alt=""></figure>
+        <div class="gviewer">
+    <div class="gv-main">
+      <button class="gv-arrow gv-prev" type="button" aria-label="Prev">&#8249;</button>
+      <img class="gv-img" src="images/cabin-03.jpg" alt="">
+      <button class="gv-arrow gv-next" type="button" aria-label="Next">&#8250;</button>
     </div>
+    <div class="gv-thumbs feat-grid feat-grid-lg">
+      <button class="gv-thumb" type="button"><img src="images/cabin-03.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-02.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-01.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-07.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-08.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-06.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-18.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-10.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-11.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-09.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-05.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-04.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-12.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-15.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-19.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-13.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-14.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-20.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-16.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/cabin-17.jpg" alt=""></button>
+    </div>
+  </div>
   </section>
 </main>
 
@@ -501,28 +521,35 @@
     </div>
     <h3 class="feat-sub" data-t="feat.gallery.h"></h3>
     <p class="feat-tap" data-t="feat.gallery.tap"></p>
-        <div class="feat-grid feat-grid-lg">
-      <figure class="g-item" data-id="apt-01"><img src="images/apt-01.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-02"><img src="images/apt-02.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-03"><img src="images/apt-03.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-04"><img src="images/apt-04.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-05"><img src="images/apt-05.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-06"><img src="images/apt-06.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-07"><img src="images/apt-07.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-08"><img src="images/apt-08.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-09"><img src="images/apt-09.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-10"><img src="images/apt-10.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-11"><img src="images/apt-11.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-12"><img src="images/apt-12.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-13"><img src="images/apt-13.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-14"><img src="images/apt-14.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-15"><img src="images/apt-15.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-16"><img src="images/apt-16.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-17"><img src="images/apt-17.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-18"><img src="images/apt-18.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-19"><img src="images/apt-19.jpg" alt=""></figure>
-      <figure class="g-item" data-id="apt-20"><img src="images/apt-20.jpg" alt=""></figure>
+        <div class="gviewer">
+    <div class="gv-main">
+      <button class="gv-arrow gv-prev" type="button" aria-label="Prev">&#8249;</button>
+      <img class="gv-img" src="images/apt-01.jpg" alt="">
+      <button class="gv-arrow gv-next" type="button" aria-label="Next">&#8250;</button>
     </div>
+    <div class="gv-thumbs feat-grid feat-grid-lg">
+      <button class="gv-thumb" type="button"><img src="images/apt-01.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-02.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-03.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-04.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-05.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-06.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-07.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-08.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-09.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-10.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-11.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-12.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-13.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-14.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-15.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-16.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-17.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-18.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-19.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/apt-20.jpg" alt=""></button>
+    </div>
+  </div>
   </section>
 </main>
 
@@ -939,6 +966,24 @@ try{ const th = localStorage.getItem("rd_theme"); if(th==="dark"||th==="light") 
   window.addEventListener('hashchange',function(){ showView(keyFromHash()); });
   window.addEventListener('resize',function(){ Object.keys(apis).forEach(function(k){ if(apis[k]) apis[k].center(); }); });
   showView(keyFromHash());
+})();
+</script>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'); var lbimg=lb?lb.querySelector('img'):null;
+  Array.prototype.slice.call(document.querySelectorAll('.gviewer')).forEach(function(gv){
+    var main=gv.querySelector('.gv-img');
+    var thumbs=Array.prototype.slice.call(gv.querySelectorAll('.gv-thumb'));
+    var srcs=thumbs.map(function(t){return t.querySelector('img').getAttribute('src');});
+    if(!srcs.length) return; var i=0;
+    function show(n){ i=(n+srcs.length)%srcs.length; main.setAttribute('src',srcs[i]); thumbs.forEach(function(t,k){ t.classList.toggle('is-active',k===i); t.setAttribute('aria-current',k===i?'true':'false'); }); }
+    gv.querySelector('.gv-prev').addEventListener('click',function(){show(i-1);});
+    gv.querySelector('.gv-next').addEventListener('click',function(){show(i+1);});
+    thumbs.forEach(function(t,k){ t.addEventListener('click',function(){show(k);}); });
+    if(lb&&lbimg){ main.addEventListener('click',function(){ lbimg.src=main.getAttribute('src'); lb.classList.add('open'); }); }
+    show(0);
+  });
 })();
 </script>
 
