@@ -187,7 +187,7 @@
   .tquote .qmark{font-family:"Fraunces",serif;font-size:64px;line-height:.5;color:var(--accent);opacity:.45;display:block;margin-bottom:6px}
   .tquote p{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(19px,2.4vw,25px);line-height:1.5;margin:0 auto;max-width:48ch}
   .tquote cite{display:block;margin-top:22px;font-style:normal;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px;text-align:left}
+  .tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:8px;text-align:left}
   .tcard{margin:0;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;gap:16px}
   .tcard .qmark{font-family:"Fraunces",serif;font-size:52px;line-height:.4;color:var(--accent);opacity:.45;height:18px}
   .tcard p{font-family:"Fraunces",serif;font-style:italic;font-size:17px;line-height:1.55;margin:0}
@@ -270,7 +270,7 @@
 
 <div class="topbar">
   <div class="wrap">
-    <a class="mark" href="#" data-go="">Réka <span class="muted">&amp;</span> <b>Dávid</b></a>
+    <a class="mark" href="#" data-go=""><b>Réka</b> <span class="muted">&amp;</span> <b>Dávid</b></a>
     <nav class="nav">
       <a href="#work" data-scroll="work" data-t="nav.work"></a>
       <a href="#services" data-scroll="services" data-t="nav.services"></a>
@@ -336,6 +336,10 @@
     <a class="work-card" href="#work/el-pilar" data-go="ep">
       <div class="work-thumb" style="background-image:url(images/ep-09.jpg)"></div>
       <div class="work-body"><span class="loc">Mountain lodge</span><h3>Hostería El Pilar</h3><p data-t="ep.card"></p><span class="work-cta" data-t="work.cta"></span></div>
+    </a>
+    <a class="work-card" href="#work/aizeder" data-go="az">
+      <div class="work-thumb" style="background-image:url(images/az-18.jpg)"></div>
+      <div class="work-body"><span class="loc">Eco container</span><h3>Aizeder</h3><p data-t="az.card"></p><span class="work-cta" data-t="work.cta"></span></div>
     </a>
     <a class="work-card" href="#work/patagonia-villa" data-go="pv">
       <div class="work-thumb" style="background-image:url(images/cabin-cover.jpg)"></div>
@@ -468,10 +472,8 @@
   <div class="tgrid">
     <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="q.ds"></p>
       <footer><b>Sol</b><span data-t="q.ds.by"></span></footer></figure>
-    <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="q.eh"></p>
-      <footer><b>Paula Andrada</b><span data-t="q.eh.by"></span></footer></figure>
     <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="testi.quote"></p>
-      <footer><b>Patagonia Villa</b><span>Cabins</span></footer></figure>
+      <footer><b>Gino</b><span>Patagonia Villa</span></footer></figure>
   </div>
 </section>
 
@@ -569,12 +571,12 @@ const T = {
     "svc.8.h":"Short edited videos","svc.8.p":"Cut and colour-graded reels for social media and your website.",
     "svc.note":"We don't fly drones, so aerial shots aren't part of our work.",
     "pkg.eyebrow":"Packages","pkg.title":"Simple packages, room to tailor",
-    "pkg.lead":"Each package includes your fee and accommodation for the two of us during the shoot. Prices are a starting point; we'll put together an exact quote for your place.",
+    "pkg.lead":"Each package is our fee plus accommodation for the two of us at your property during the shoot. Prices are a starting point; we'll put together an exact quote for your place.",
     "pkg.from":"from",
     "pkg.1.tag":"For small lodges, cabins and guesthouses.",
     "pkg.1.a":"2 nights on site","pkg.1.b":"30 edited photos","pkg.1.c":"Interiors, exterior & lifestyle",
     "pkg.all.d":"Delivery within 2 weeks",
-    "pkg.pop":"Most chosen",
+    "pkg.pop":"Recommended",
     "pkg.2.tag":"For hotels that want the full experience told.",
     "pkg.2.a":"4 nights on site","pkg.2.b":"60 edited photos","pkg.2.c":"5 moody b-roll clips","pkg.2.d":"Spa, food & drink, team",
     "pkg.3.tag":"For larger properties, groups and campaigns.",
@@ -590,7 +592,7 @@ const T = {
     "au.3.h":"Strategic changes","au.3.p":"Bigger rebuilds worth planning for, with the reasons why they matter.",
     "about.li":"Réka on LinkedIn →",
     "add.1":"Extra edited photos","add.2":"Extra b-roll clips","add.3":"Short edited reel (15–30 s)","add.4":"Edited video (60–90 s)","add.5":"Extra night on site","add.6":"Express delivery (within 5 days)",
-    "pkg.note":"Travel costs to remote locations are quoted separately. Larger usage, like paid advertising campaigns, is agreed separately.",
+    "pkg.note":"No travel costs for places along our current route; travel to other remote locations is quoted separately. Larger usage, like paid advertising campaigns, is agreed separately.",
     "how.eyebrow":"How we work","how.title":"From first message to final gallery",
     "how.1.n":"Step 01","how.1.h":"We talk","how.1.p":"A short call or chat about your place, your guests and the feeling you want to show.",
     "how.2.n":"Step 02","how.2.h":"We plan","how.2.p":"A shot list and a rough schedule, built around light, your busy hours and other guests.",
@@ -609,7 +611,7 @@ const T = {
     "q.ds.by":"Communications, Destino Sur Hotel & Spa",
     "q.eh":"Working with Réka and Dávid was an excellent experience. From the very first moment they understood what we wanted to convey with EH Aparts and captured the essence of our brand in every image. They reflected much more than a space: the identity, the warmth and the experience we want to offer our guests. We fully recommend them!",
     "q.eh.by":"Project Manager, EH Aparts",
-    "testi.quote":"The photography service provided for our cabins and apartments was absolutely spectacular, operating with total autonomy, professionalism, and high efficiency. It is clear that Réka and Dávid have extensive industry experience, as the final results did not disappoint in the slightest.",
+    "testi.quote":"The photography service provided for our cabins and apartments was absolutely spectacular, operating with total autonomy, professionalism, and high efficiency. It is clear that Réka and Dávid have extensive industry experience, as the final results did not disappoint in the slightest. I completely and wholeheartedly recommend their work to anyone looking to elevate their property listings!",
     "c.eyebrow":"Contact","c.title":"Let's talk about your place","c.lead":"Tell us a little about your property and when would suit you. We usually reply within a day.",
     "c.lang.b":"Languages",
     "f.name":"Your name","f.place":"Property name","f.loc":"Location","f.dates":"Preferred dates","f.pkg":"Package","f.unsure":"Not sure yet","f.msg":"Tell us about your place","f.send":"Send inquiry","f.note":"Opens your email app with the details filled in.",
@@ -657,12 +659,12 @@ const T = {
     "svc.8.h":"Videos cortos editados","svc.8.p":"Reels editados y con color, para redes y su web.",
     "svc.note":"No trabajamos con drones, así que las tomas aéreas no forman parte de nuestro trabajo.",
     "pkg.eyebrow":"Paquetes","pkg.title":"Paquetes simples, con espacio para adaptarlos",
-    "pkg.lead":"Cada paquete incluye nuestros honorarios y el alojamiento para los dos durante la sesión. Los precios son un punto de partida; armamos un presupuesto exacto para su lugar.",
+    "pkg.lead":"Cada paquete son nuestros honorarios más el alojamiento para los dos en su propiedad durante la sesión. Los precios son un punto de partida; armamos un presupuesto exacto para su lugar.",
     "pkg.from":"desde",
     "pkg.1.tag":"Para lodges pequeños, cabañas y hosterías.",
     "pkg.1.a":"2 noches en el lugar","pkg.1.b":"30 fotos editadas","pkg.1.c":"Interiores, exterior y lifestyle",
     "pkg.all.d":"Entrega dentro de 2 semanas",
-    "pkg.pop":"El más elegido",
+    "pkg.pop":"Recomendado",
     "pkg.2.tag":"Para hoteles que quieren contar toda la experiencia.",
     "pkg.2.a":"4 noches en el lugar","pkg.2.b":"60 fotos editadas","pkg.2.c":"5 clips de b-roll","pkg.2.d":"Spa, gastronomía, equipo",
     "pkg.3.tag":"Para propiedades más grandes, grupos y campañas.",
@@ -678,7 +680,7 @@ const T = {
     "au.3.h":"Cambios estratégicos","au.3.p":"Reestructuraciones más grandes que conviene planificar, con el porqué de cada una.",
     "about.li":"Réka en LinkedIn →",
     "add.1":"Fotos editadas adicionales","add.2":"Clips de b-roll adicionales","add.3":"Reel corto editado (15–30 s)","add.4":"Video editado (60–90 s)","add.5":"Noche adicional en el lugar","add.6":"Entrega express (en 5 días)",
-    "pkg.note":"Los gastos de viaje a lugares remotos se cotizan aparte. Usos más amplios, como campañas publicitarias pagas, se acuerdan aparte.",
+    "pkg.note":"Sin gastos de viaje para lugares sobre nuestra ruta actual; el viaje a otros lugares remotos se cotiza aparte. Usos más amplios, como campañas publicitarias pagas, se acuerdan aparte.",
     "how.eyebrow":"Cómo trabajamos","how.title":"Del primer mensaje a la galería final",
     "how.1.n":"Paso 01","how.1.h":"Conversamos","how.1.p":"Una charla breve sobre su lugar, sus huéspedes y la sensación que quieren mostrar.",
     "how.2.n":"Paso 02","how.2.h":"Planificamos","how.2.p":"Una lista de tomas y un horario aproximado, pensado según la luz, sus horas pico y los demás huéspedes.",
@@ -697,7 +699,7 @@ const T = {
     "q.ds.by":"Comunicación, Destino Sur Hotel & Spa",
     "q.eh":"Trabajar con Réka y Dávid fue una experiencia excelente. Desde el primer momento entendieron perfectamente lo que queríamos transmitir con EH Aparts y lograron captar la esencia de nuestra marca en cada imagen. Reflejaron en las fotografías mucho más que un espacio: la identidad, la calidez y la experiencia que queremos ofrecer a nuestros huéspedes. ¡Los recomendamos totalmente!",
     "q.eh.by":"Project Manager, EH Aparts",
-    "testi.quote":"El servicio de fotografía que realizaron para nuestras cabañas y apartamentos fue absolutamente espectacular, trabajando con total autonomía, profesionalismo y gran eficiencia. Se nota que Réka y Dávid tienen amplia experiencia en el rubro, ya que el resultado final no decepcionó en lo más mínimo.",
+    "testi.quote":"El servicio de fotografía que realizaron para nuestras cabañas y apartamentos fue absolutamente espectacular, trabajando con total autonomía, profesionalismo y gran eficiencia. Se nota que Réka y Dávid tienen amplia experiencia en el rubro, ya que el resultado final no decepcionó en lo más mínimo. ¡Recomiendo su trabajo de todo corazón a cualquiera que quiera elevar la presentación de su propiedad!",
     "c.eyebrow":"Contacto","c.title":"Hablemos de su lugar","c.lead":"Cuéntennos un poco sobre su propiedad y qué fechas les quedarían bien. Solemos responder en un día.",
     "c.lang.b":"Idiomas",
     "f.name":"Su nombre","f.place":"Nombre del alojamiento","f.loc":"Ubicación","f.dates":"Fechas posibles","f.pkg":"Paquete","f.unsure":"Todavía no sé","f.msg":"Cuéntennos sobre su lugar","f.send":"Enviar consulta","f.note":"Abre su app de email con los datos completados.",
@@ -726,10 +728,9 @@ const AZ_IMGS = [18, 7, 14, 21, 13, 5, 1, 20, 12, 19, 22, 2, 3, 4, 6, 8, 9, 10, 
 const EH_IMGS = [25, 15, 14, 5, 23, 20, 22, 24, 12, 10, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 16, 17, 18, 19, 21].map(n=>"images/eh-"+String(n).padStart(2,"0")+".jpg");
 const PROJ = {
   ds:{slug:"destino-sur", title:"Destino Sur · Hotel & Spa", story:"pj.ds.story", meta:"m.ds", quote:"q.ds", by:"Sol · Destino Sur", imgs:DS_IMGS, next:"ep"},
-  ep:{slug:"el-pilar", title:"Hostería El Pilar", story:"pj.ep.story", meta:"m.ep", imgs:EP_IMGS, next:"pv"},
-  eh:{slug:"eh-aparts", title:"EH Aparts", story:"pj.eh.story", meta:"m.eh", quote:"q.eh", by:"Paula Andrada · EH Aparts", imgs:EH_IMGS, next:"az"},
+  ep:{slug:"el-pilar", title:"Hostería El Pilar", story:"pj.ep.story", meta:"m.ep", imgs:EP_IMGS, next:"az"},
   az:{slug:"aizeder", title:"Aizeder · Mountain View EcoContainer", story:"pj.az.story", meta:"m.az", imgs:AZ_IMGS, next:"pv"},
-  pv:{slug:"patagonia-villa", title:"Patagonia Villa", story:"pj.pv.story", meta:"m.pv", quote:"testi.quote", by:"Patagonia Villa", imgs:PV_IMGS, next:"ds"}
+  pv:{slug:"patagonia-villa", title:"Patagonia Villa", story:"pj.pv.story", meta:"m.pv", quote:"testi.quote", by:"Gino · Patagonia Villa", imgs:PV_IMGS, next:"ds"}
 };
 
 let lang = "en", curProj = null;
