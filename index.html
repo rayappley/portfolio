@@ -231,7 +231,7 @@
   @media (max-width:480px){ .ba-thumb{width:64px;height:64px} }
   .ba-cap{text-align:center;font-size:13px;color:var(--muted);margin:10px 0 0}
   .ba-cap b{color:var(--ink);font-family:"Fraunces",serif;font-weight:600}
-  .work-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+  .work-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:24px}
   .work-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--hair);border-radius:8px;overflow:hidden;background:var(--surface);transition:transform .18s,box-shadow .18s,border-color .18s}
   .work-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.14);border-color:var(--accent-soft)}
   .work-thumb{aspect-ratio:4/3;background-size:cover !important;background-position:center}
@@ -261,7 +261,7 @@
   .gv-thumb img{width:100%;height:100%;object-fit:cover;display:block}
   .gv-thumb.is-active{opacity:1;border-color:var(--accent)}
   @media (max-width:520px){ .gv-main{aspect-ratio:4/5} }
-  @media (max-width:760px){ .work-cards{grid-template-columns:1fr} }
+  @media (max-width:900px){ .work-cards{grid-template-columns:1fr} }
   .feat-sub{font-family:"Fraunces",serif;font-weight:600;font-size:19px;margin:34px 0 6px}
   .feat-tap{font-size:13px;color:var(--muted);margin:0 0 14px}
   .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -341,19 +341,43 @@
     <p class="lead" data-t="feat.story"></p>
   </div>
   <div class="work-cards">
+    <a class="work-card" href="#work/destino-sur" data-go="ds">
+      <div class="work-thumb" style="background-image:url(images/ds-27.jpg)"></div>
+      <div class="work-body">
+        <h3 data-t="feat.tab.ds"></h3>
+        <p data-t="feat.ds.card"></p>
+        <span class="work-cta" data-t="feat.card.cta"></span>
+      </div>
+    </a>
+    <a class="work-card" href="#work/el-pilar" data-go="ep">
+      <div class="work-thumb" style="background-image:url(images/ep-09.jpg)"></div>
+      <div class="work-body">
+        <h3 data-t="feat.tab.ep"></h3>
+        <p data-t="feat.ep.card"></p>
+        <span class="work-cta" data-t="feat.card.cta"></span>
+      </div>
+    </a>
+    <a class="work-card" href="#work/eh-aparts" data-go="eh">
+      <div class="work-thumb" style="background-image:url(images/eh-25.jpg)"></div>
+      <div class="work-body">
+        <h3 data-t="feat.tab.eh"></h3>
+        <p data-t="feat.eh.card"></p>
+        <span class="work-cta" data-t="feat.card.cta"></span>
+      </div>
+    </a>
+    <a class="work-card" href="#work/aizeder" data-go="az">
+      <div class="work-thumb" style="background-image:url(images/az-18.jpg)"></div>
+      <div class="work-body">
+        <h3 data-t="feat.tab.az"></h3>
+        <p data-t="feat.az.card"></p>
+        <span class="work-cta" data-t="feat.card.cta"></span>
+      </div>
+    </a>
     <a class="work-card" href="#work/cabanas" data-go="cab">
       <div class="work-thumb" style="background-image:url(images/cabin-cover.jpg)"></div>
       <div class="work-body">
         <h3 data-t="feat.tab.cab"></h3>
         <p data-t="feat.cab.card"></p>
-        <span class="work-cta" data-t="feat.card.cta"></span>
-      </div>
-    </a>
-    <a class="work-card" href="#work/apartments" data-go="apt">
-      <div class="work-thumb" style="background-image:url(images/apt-cover.jpg)"></div>
-      <div class="work-body">
-        <h3 data-t="feat.tab.apt"></h3>
-        <p data-t="feat.apt.card"></p>
         <span class="work-cta" data-t="feat.card.cta"></span>
       </div>
     </a>
@@ -430,6 +454,8 @@
       <li data-t="next.1"></li>
       <li data-t="next.2"></li>
       <li data-t="next.3"></li>
+      <li data-t="next.4"></li>
+      <li data-t="next.5"></li>
     </ul>
     <div class="stayed" hidden>
       <h4 data-t="next.stayed.h"></h4>
@@ -510,44 +536,203 @@
   </section>
 </main>
 
-<!-- SUBPAGE: APARTMENTS -->
-<main id="view-apt" class="subpage" hidden>
+<!-- SUBPAGE: DS -->
+<main id="view-ds" class="subpage" hidden>
   <section class="wrap">
     <a class="back-link" href="#" data-go="">&larr; <span data-t="sub.back"></span></a>
     <div class="sechead">
       <p class="eyebrow" data-t="sub.eyebrow"></p>
-      <h2 data-t="sub.apt.title"></h2>
-      <p class="lead" data-t="feat.apt.story"></p>
+      <h2 data-t="sub.ds.title"></h2>
+      <p class="lead" data-t="feat.ds.story"></p>
     </div>
     <h3 class="feat-sub" data-t="feat.gallery.h"></h3>
     <p class="feat-tap" data-t="feat.gallery.tap"></p>
-        <div class="gviewer">
+    <div class="gviewer">
     <div class="gv-main">
       <button class="gv-arrow gv-prev" type="button" aria-label="Prev">&#8249;</button>
-      <img class="gv-img" src="images/apt-01.jpg" alt="">
+      <img class="gv-img" src="images/ds-27.jpg" alt="">
       <button class="gv-arrow gv-next" type="button" aria-label="Next">&#8250;</button>
     </div>
     <div class="gv-thumbs feat-grid feat-grid-lg">
-      <button class="gv-thumb" type="button"><img src="images/apt-01.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-02.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-03.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-04.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-05.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-06.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-07.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-08.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-09.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-10.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-11.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-12.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-13.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-14.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-15.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-16.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-17.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-18.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-19.jpg" alt=""></button>
-      <button class="gv-thumb" type="button"><img src="images/apt-20.jpg" alt=""></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-27.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-12.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-10.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-07.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-23.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-17.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-37.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-33.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-36.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-04.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-02.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-18.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-22.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-01.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-03.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-05.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-06.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-08.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-09.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-11.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-13.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-14.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-15.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-16.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-19.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-20.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-21.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-24.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-25.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-26.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-28.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-29.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-30.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-31.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-32.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-34.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-35.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-38.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ds-39.jpg" alt="" loading="lazy"></button>
+    </div>
+  </div>
+  </section>
+</main>
+
+<!-- SUBPAGE: EP -->
+<main id="view-ep" class="subpage" hidden>
+  <section class="wrap">
+    <a class="back-link" href="#" data-go="">&larr; <span data-t="sub.back"></span></a>
+    <div class="sechead">
+      <p class="eyebrow" data-t="sub.eyebrow"></p>
+      <h2 data-t="sub.ep.title"></h2>
+      <p class="lead" data-t="feat.ep.story"></p>
+    </div>
+    <h3 class="feat-sub" data-t="feat.gallery.h"></h3>
+    <p class="feat-tap" data-t="feat.gallery.tap"></p>
+    <div class="gviewer">
+    <div class="gv-main">
+      <button class="gv-arrow gv-prev" type="button" aria-label="Prev">&#8249;</button>
+      <img class="gv-img" src="images/ep-09.jpg" alt="">
+      <button class="gv-arrow gv-next" type="button" aria-label="Next">&#8250;</button>
+    </div>
+    <div class="gv-thumbs feat-grid feat-grid-lg">
+      <button class="gv-thumb" type="button"><img src="images/ep-09.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-24.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-13.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-04.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-19.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-17.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-10.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-16.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-05.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-02.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-11.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-23.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-01.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-03.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-06.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-07.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-08.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-12.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-14.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-15.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-18.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-20.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-21.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/ep-22.jpg" alt="" loading="lazy"></button>
+    </div>
+  </div>
+  </section>
+</main>
+
+<!-- SUBPAGE: EH -->
+<main id="view-eh" class="subpage" hidden>
+  <section class="wrap">
+    <a class="back-link" href="#" data-go="">&larr; <span data-t="sub.back"></span></a>
+    <div class="sechead">
+      <p class="eyebrow" data-t="sub.eyebrow"></p>
+      <h2 data-t="sub.eh.title"></h2>
+      <p class="lead" data-t="feat.eh.story"></p>
+    </div>
+    <h3 class="feat-sub" data-t="feat.gallery.h"></h3>
+    <p class="feat-tap" data-t="feat.gallery.tap"></p>
+    <div class="gviewer">
+    <div class="gv-main">
+      <button class="gv-arrow gv-prev" type="button" aria-label="Prev">&#8249;</button>
+      <img class="gv-img" src="images/eh-25.jpg" alt="">
+      <button class="gv-arrow gv-next" type="button" aria-label="Next">&#8250;</button>
+    </div>
+    <div class="gv-thumbs feat-grid feat-grid-lg">
+      <button class="gv-thumb" type="button"><img src="images/eh-25.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-15.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-14.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-05.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-23.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-20.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-22.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-24.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-12.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-10.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-01.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-02.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-03.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-04.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-06.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-07.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-08.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-09.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-11.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-13.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-16.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-17.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-18.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-19.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/eh-21.jpg" alt="" loading="lazy"></button>
+    </div>
+  </div>
+  </section>
+</main>
+
+<!-- SUBPAGE: AZ -->
+<main id="view-az" class="subpage" hidden>
+  <section class="wrap">
+    <a class="back-link" href="#" data-go="">&larr; <span data-t="sub.back"></span></a>
+    <div class="sechead">
+      <p class="eyebrow" data-t="sub.eyebrow"></p>
+      <h2 data-t="sub.az.title"></h2>
+      <p class="lead" data-t="feat.az.story"></p>
+    </div>
+    <h3 class="feat-sub" data-t="feat.gallery.h"></h3>
+    <p class="feat-tap" data-t="feat.gallery.tap"></p>
+    <div class="gviewer">
+    <div class="gv-main">
+      <button class="gv-arrow gv-prev" type="button" aria-label="Prev">&#8249;</button>
+      <img class="gv-img" src="images/az-18.jpg" alt="">
+      <button class="gv-arrow gv-next" type="button" aria-label="Next">&#8250;</button>
+    </div>
+    <div class="gv-thumbs feat-grid feat-grid-lg">
+      <button class="gv-thumb" type="button"><img src="images/az-18.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-07.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-14.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-21.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-13.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-05.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-01.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-20.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-12.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-19.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-22.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-02.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-03.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-04.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-06.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-08.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-09.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-10.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-11.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-15.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-16.jpg" alt="" loading="lazy"></button>
+      <button class="gv-thumb" type="button"><img src="images/az-17.jpg" alt="" loading="lazy"></button>
     </div>
   </div>
   </section>
@@ -620,7 +805,23 @@ const T = {
     "footer.t":"Fotografía & video de viajes",
     "hero.cta":"Hablemos",
     "feat.eyebrow":"TRABAJO RECIENTE",
-    "feat.tab.cab":"Cabañas",
+    "feat.tab.ep":"Hostería El Pilar · El Chaltén",
+    "feat.tab.az":"Aizeder · El Chaltén",
+    "feat.ep.card":"Una hostería de montaña histórica, en el primer día de la temporada.",
+    "feat.az.card":"Un container en el bosque, con el Fitz Roy frente a la ventana.",
+    "sub.ep.title":"Hostería El Pilar · El Chaltén",
+    "sub.az.title":"Aizeder · Mountain View EcoContainer",
+    "feat.ep.story":"Una hostería familiar de montaña a las afueras de El Chaltén, al pie de los cerros. Fotografiamos los interiores cálidos de madera, las salamandras, el jardín y las montañas alrededor, en los primeros días de la nueva temporada.",
+    "feat.az.story":"Un eco container en el bosque, a 16 km de El Chaltén, cerca de los senderos de Río Eléctrico. Fotografiamos sus interiores simples, los grandes ventanales con vista a la montaña y mañanas tranquilas con café en el deck.",
+    "feat.tab.ds":"Destino Sur · El Chaltén",
+    "feat.tab.eh":"EH Aparts · El Chaltén",
+    "feat.ds.card":"Un hotel de montaña con spa: huéspedes en la pileta, el bar y la mesa.",
+    "feat.eh.card":"Departamentos luminosos de montaña, desayunos y tardes tranquilas.",
+    "sub.ds.title":"Destino Sur · Hotel & Spa",
+    "sub.eh.title":"EH Aparts · El Chaltén",
+    "feat.ds.story":"Un hotel de montaña en El Chaltén, con spa, restaurante y bar. El pedido era mostrar la experiencia del huésped: personas disfrutando de las habitaciones, la pileta y el spa, la cena y los tragos.",
+    "feat.eh.story":"Departamentos luminosos y renovados con mucho gusto en El Chaltén. Junto con la anfitriona planeamos escenas de desayuno, merienda y vino, y fotografiamos los departamentos y los detalles que notan los huéspedes.",
+    "feat.tab.cab":"Patagonia Villa · Ushuaia",
     "feat.tab.apt":"Apartamento",
     "feat.cab.story":"Las cabañas son cálidas y revestidas en madera, hechas para bajar el ritmo. Las fotografiamos por esa sensación acogedora y de refugio, y por cómo se mueve la luz dentro.",
     "feat.apt.story":"El apartamento se trata del espacio y las vistas. Los grandes ventanales se abren al Canal Beagle y a las montañas nevadas del fondo, y la luz transforma las habitaciones a lo largo del día.",
@@ -631,8 +832,8 @@ const T = {
     "sub.eyebrow":"PROYECTO",
     "sub.cab.title":"Patagonia Villa · Cabañas",
     "sub.apt.title":"Patagonia Villa · Apartamento",
-    "feat.title":"Patagonia Villa · Ushuaia",
-    "feat.story":"Nuestra estadía más reciente, en el fin del mundo. Patagonia Villa nos recibió dos noches y fotografiamos dos cabañas y un apartamento: los espacios, la luz que entra por las ventanas y la sensación de llegar después de un largo día de viaje.",
+    "feat.title":"Proyectos recientes",
+    "feat.story":"Algunos de los lugares que fotografiamos en la Patagonia: de cabañas de madera en Ushuaia a un hotel de montaña con spa en El Chaltén.",
     "feat.ba.h":"Listing anterior / nuestro trabajo",
     "feat.ba.note":"su foto de listing anterior vs. la nuestra \u2014 arrastren para comparar",
     "feat.ba.before":"Listing anterior",
@@ -646,9 +847,7 @@ const T = {
     "next.eyebrow":"LO QUE VIENE",
     "next.title":"Hacia d\u00f3nde vamos",
     "next.note":"Si pasamos por su zona, escr\u00edbannos \u2014 nos encantar\u00eda conocer su alojamiento.",
-    "next.1":"Ushuaia \u00b7 ahora",
-    "next.2":"Punta Arenas \u00b7 5\u20138 oct",
-    "next.3":"El Chalt\u00e9n \u00b7 20 oct \u2013 6 nov",
+    "next.1":"El Chaltén · ahora","next.2":"Chile Chico · Carretera Austral","next.3":"Coyhaique · Carretera Austral","next.4":"Puerto Montt","next.5":"Bariloche",
     "next.stayed.h":"D\u00f3nde nos quedamos",
     "next.stayed.1":"Patagonia Villa \u00b7 Ushuaia",
     "pkg.paid":"Para hoteles, lodges y proyectos m\u00e1s grandes armamos con gusto una propuesta a medida \u2014un paquete de fotos m\u00e1s amplio, videos editados, incluso una auditor\u00eda o un redise\u00f1o de su sitio web.",
@@ -718,7 +917,23 @@ const T = {
     "footer.t":"Travel photography & video",
     "hero.cta":"Get in touch",
     "feat.eyebrow":"RECENT WORK",
-    "feat.tab.cab":"Cabins",
+    "feat.tab.ep":"Hostería El Pilar · El Chaltén",
+    "feat.tab.az":"Aizeder · El Chaltén",
+    "feat.ep.card":"A historic mountain lodge, on the first day of the season.",
+    "feat.az.card":"A container home in the forest, with Fitz Roy right outside the window.",
+    "sub.ep.title":"Hostería El Pilar · El Chaltén",
+    "sub.az.title":"Aizeder · Mountain View EcoContainer",
+    "feat.ep.story":"A family-run mountain lodge outside El Chaltén, at the foot of the peaks. We photographed the warm wooden interiors, the fireplaces, the garden and the mountains around it, on the first days of the new season.",
+    "feat.az.story":"An eco container home in the forest, 16 km from El Chaltén, close to the trails of Río Eléctrico. We photographed its simple interiors, the big windows with the mountain view, and slow mornings with coffee on the deck.",
+    "feat.tab.ds":"Destino Sur · El Chaltén",
+    "feat.tab.eh":"EH Aparts · El Chaltén",
+    "feat.ds.card":"A mountain hotel with a spa: guests at the pool, the bar and the table.",
+    "feat.eh.card":"Bright mountain apartments, breakfasts and slow afternoons.",
+    "sub.ds.title":"Destino Sur · Hotel & Spa",
+    "sub.eh.title":"EH Aparts · El Chaltén",
+    "feat.ds.story":"A mountain hotel in El Chaltén with a spa, a restaurant and a bar. The brief was to show the guest experience: people enjoying the rooms, the pool and spa, dinner and drinks.",
+    "feat.eh.story":"Bright, thoughtfully renovated apartments in El Chaltén. Together with the host we planned breakfast, afternoon and wine scenes, and photographed the apartments and the details guests notice.",
+    "feat.tab.cab":"Patagonia Villa · Ushuaia",
     "feat.tab.apt":"Apartment",
     "feat.cab.story":"The cabins are warm and wood-lined, made for slowing down. We photographed them for that cosy, tucked-away feeling and the way the light moves through them.",
     "feat.apt.story":"The apartment is all about space and the view. Big windows open onto the Beagle Channel and the snow-capped mountains beyond, and the light changes the rooms throughout the day.",
@@ -729,8 +944,8 @@ const T = {
     "sub.eyebrow":"PROJECT",
     "sub.cab.title":"Patagonia Villa · Cabins",
     "sub.apt.title":"Patagonia Villa · Apartment",
-    "feat.title":"Patagonia Villa · Ushuaia",
-    "feat.story":"Our most recent stay, at the end of the world. Patagonia Villa hosted us for two nights, and we photographed two cabins and one apartment: the spaces, the light coming through the windows, and the feeling of arriving after a long day on the road.",
+    "feat.title":"Recent projects",
+    "feat.story":"A few of the places we’ve photographed in Patagonia: from wooden cabins in Ushuaia to a mountain hotel with a spa in El Chaltén.",
     "feat.ba.h":"Old listing / our work",
     "feat.ba.note":"their old listing photo vs. ours \u2014 drag to compare",
     "feat.ba.before":"Old listing",
@@ -744,9 +959,7 @@ const T = {
     "next.eyebrow":"WHAT\u2019S NEXT",
     "next.title":"Where we\u2019re heading next",
     "next.note":"If we\u2019re passing through your area, get in touch \u2014 we\u2019d love to see your place.",
-    "next.1":"Ushuaia \u00b7 now",
-    "next.2":"Punta Arenas \u00b7 Oct 5\u20138",
-    "next.3":"El Chalt\u00e9n \u00b7 Oct 20 \u2013 Nov 6",
+    "next.1":"El Chaltén · now","next.2":"Chile Chico · Carretera Austral","next.3":"Coyhaique · Carretera Austral","next.4":"Puerto Montt","next.5":"Bariloche",
     "next.stayed.h":"Places we\u2019ve stayed",
     "next.stayed.1":"Patagonia Villa \u00b7 Ushuaia",
     "pkg.paid":"For hotels, lodges and larger projects we\u2019re happy to put together a custom offer \u2014 a bigger photo package, edited videos, even a website audit or redesign.",
@@ -949,17 +1162,16 @@ try{ const th = localStorage.getItem("rd_theme"); if(th==="dark"||th==="light") 
   var apis={};
   apis.cab=initBA(document.getElementById('ba_cab'), CAB);
   apis.apt=initBA(document.getElementById('ba_apt'), APT);
-  var main=document.getElementById('view-main'), vcab=document.getElementById('view-cab'), vapt=document.getElementById('view-apt');
-  var HASH={cab:'work/cabanas', apt:'work/apartments'};
+  var main=document.getElementById('view-main'), VIEWS={cab:document.getElementById('view-cab'), ds:document.getElementById('view-ds'), eh:document.getElementById('view-eh'), ep:document.getElementById('view-ep'), az:document.getElementById('view-az')};
+  var HASH={cab:'work/cabanas', ds:'work/destino-sur', eh:'work/eh-aparts', ep:'work/el-pilar', az:'work/aizeder'};
   function showView(key){
     if(main) main.hidden = !!key;
-    if(vcab) vcab.hidden = (key!=='cab');
-    if(vapt) vapt.hidden = (key!=='apt');
+    Object.keys(VIEWS).forEach(function(k){ if(VIEWS[k]) VIEWS[k].hidden = (key!==k); });
     try{ var want=key?HASH[key]:''; var cur=(location.hash||'').replace(/^#/,''); if(cur!==want){ location.hash=want; } }catch(e){}
     window.scrollTo(0,0);
     if(key && apis[key]) apis[key].center();
   }
-  function keyFromHash(){ var h=(location.hash||'').replace(/^#/,''); return h==='work/cabanas'?'cab':(h==='work/apartments'?'apt':''); }
+  function keyFromHash(){ var h=(location.hash||'').replace(/^#/,''); var f=''; Object.keys(HASH).forEach(function(k){ if(HASH[k]===h) f=k; }); return f; }
   Array.prototype.slice.call(document.querySelectorAll('[data-go]')).forEach(function(el){
     el.addEventListener('click',function(e){ e.preventDefault(); showView(el.getAttribute('data-go')||''); });
   });
