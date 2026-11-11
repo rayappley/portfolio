@@ -187,7 +187,7 @@
   .tquote .qmark{font-family:"Fraunces",serif;font-size:64px;line-height:.5;color:var(--accent);opacity:.45;display:block;margin-bottom:6px}
   .tquote p{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(19px,2.4vw,25px);line-height:1.5;margin:0 auto;max-width:48ch}
   .tquote cite{display:block;margin-top:22px;font-style:normal;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-  .tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:8px;text-align:left}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px;text-align:left}
   .tcard{margin:0;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;gap:16px}
   .tcard .qmark{font-family:"Fraunces",serif;font-size:52px;line-height:.4;color:var(--accent);opacity:.45;height:18px}
   .tcard p{font-family:"Fraunces",serif;font-style:italic;font-size:17px;line-height:1.55;margin:0}
@@ -476,6 +476,8 @@
   <div class="tgrid">
     <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="q.ds"></p>
       <footer><b>Sol</b><span data-t="q.ds.by"></span></footer></figure>
+    <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="q.az"></p>
+      <footer><b>Ayelén</b><span>Aizeder EcoContainer</span></footer></figure>
     <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="testi.quote"></p>
       <footer><b>Gino</b><span>Patagonia Villa</span></footer></figure>
   </div>
@@ -613,6 +615,7 @@ const T = {
     "testi.title":"Kind words from our hosts",
     "q.ds":"Réka and Dávid were one of the best collaborations we've had at the hotel. Professional and attentive, they understood perfectly what we needed. The images they delivered were truly excellent. We would happily host them again and we recommend them.",
     "q.ds.by":"Communications, Destino Sur Hotel & Spa",
+    "q.az":"Working with Réka and Dávid was incredibly easy. They were so kind and respectful of our space, and we absolutely love the final photos! They knew exactly how to work with the natural light and captured the true essence of our little place in the forest. You can feel both the quality of their work and the care they put into everything they delivered. We’re so happy with the result and would recommend them without hesitation.",
     "q.eh":"Working with Réka and Dávid was an excellent experience. From the very first moment they understood what we wanted to convey with EH Aparts and captured the essence of our brand in every image. They reflected much more than a space: the identity, the warmth and the experience we want to offer our guests. We fully recommend them!",
     "q.eh.by":"Project Manager, EH Aparts",
     "testi.quote":"The photography service provided for our cabins and apartments was absolutely spectacular, operating with total autonomy, professionalism, and high efficiency. It is clear that Réka and Dávid have extensive industry experience, as the final results did not disappoint in the slightest. I completely and wholeheartedly recommend their work to anyone looking to elevate their property listings!",
@@ -701,6 +704,7 @@ const T = {
     "testi.title":"Lo que dicen nuestros anfitriones",
     "q.ds":"Réka y Dávid fueron una de las mejores colaboraciones que hemos tenido en el hotel. Profesionales, atentos, lograron entender a la perfección lo que estábamos necesitando. Las imágenes que nos brindaron fueron realmente excelentes. Sin lugar a dudas los volveríamos a recibir y los recomendamos.",
     "q.ds.by":"Comunicación, Destino Sur Hotel & Spa",
+    "q.az":"Trabajar con Réka y Dávid fue increíblemente fácil. Fueron muy amables y respetuosos con nuestro espacio, ¡y nos encantan las fotos finales! Supieron exactamente cómo trabajar con la luz natural y captaron la verdadera esencia de nuestro pequeño lugar en el bosque. Se nota tanto la calidad de su trabajo como el cuidado que pusieron en todo lo que entregaron. Estamos muy contentos con el resultado y los recomendaríamos sin dudarlo.",
     "q.eh":"Trabajar con Réka y Dávid fue una experiencia excelente. Desde el primer momento entendieron perfectamente lo que queríamos transmitir con EH Aparts y lograron captar la esencia de nuestra marca en cada imagen. Reflejaron en las fotografías mucho más que un espacio: la identidad, la calidez y la experiencia que queremos ofrecer a nuestros huéspedes. ¡Los recomendamos totalmente!",
     "q.eh.by":"Project Manager, EH Aparts",
     "testi.quote":"El servicio de fotografía que realizaron para nuestras cabañas y apartamentos fue absolutamente espectacular, trabajando con total autonomía, profesionalismo y gran eficiencia. Se nota que Réka y Dávid tienen amplia experiencia en el rubro, ya que el resultado final no decepcionó en lo más mínimo. ¡Recomiendo su trabajo de todo corazón a cualquiera que quiera elevar la presentación de su propiedad!",
@@ -733,7 +737,7 @@ const EH_IMGS = [25, 15, 14, 5, 23, 20, 22, 24, 12, 10, 1, 2, 3, 4, 6, 7, 8, 9, 
 const PROJ = {
   ds:{slug:"destino-sur", title:"Destino Sur · Hotel & Spa", story:"pj.ds.story", meta:"m.ds", quote:"q.ds", by:"Sol · Destino Sur", imgs:DS_IMGS, next:"ep"},
   ep:{slug:"el-pilar", title:"Hostería El Pilar", story:"pj.ep.story", meta:"m.ep", imgs:EP_IMGS, next:"az"},
-  az:{slug:"aizeder", title:"Aizeder · Mountain View EcoContainer", story:"pj.az.story", meta:"m.az", imgs:AZ_IMGS, next:"pv"},
+  az:{slug:"aizeder", title:"Aizeder · Mountain View EcoContainer", story:"pj.az.story", meta:"m.az", quote:"q.az", by:"Ayelén · Aizeder", imgs:AZ_IMGS, next:"pv"},
   pv:{slug:"patagonia-villa", title:"Patagonia Villa", story:"pj.pv.story", meta:"m.pv", quote:"testi.quote", by:"Gino · Patagonia Villa", imgs:PV_IMGS, next:"ds"}
 };
 

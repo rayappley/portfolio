@@ -269,6 +269,15 @@
   .testi{margin:30px auto 0;max-width:60ch;text-align:center;border-top:1px solid var(--hair);padding-top:24px}
   .testi p{font-family:"Fraunces",serif;font-size:20px;font-style:italic;color:var(--ink);margin:0}
   .testi cite{display:block;margin-top:10px;font-size:14px;color:var(--muted);font-style:normal}
+  .treviews{text-align:center}
+  .treviews .eyebrow{margin-bottom:22px}
+  .tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;text-align:left}
+  .tcard{margin:0;background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:28px 26px;display:flex;flex-direction:column;gap:16px}
+  .tcard .qmark{font-family:"Fraunces",serif;font-size:52px;line-height:.4;color:var(--accent);opacity:.45;height:18px}
+  .tcard p{font-family:"Fraunces",serif;font-style:italic;font-size:17px;line-height:1.55;margin:0;color:var(--ink)}
+  .tcard footer{margin-top:auto;padding:0;border:0;background:none;text-align:left;font-size:13px;color:var(--muted)}
+  .tcard footer b{display:block;color:var(--ink);font-weight:600;font-size:14px}
+  @media (max-width:720px){ .tgrid{grid-template-columns:1fr} }
   .testimonial{max-width:860px;margin:0 auto;background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:clamp(30px,5vw,54px) clamp(22px,5vw,56px);text-align:center}
   .testimonial .eyebrow{margin-bottom:20px}
   .tquote{margin:0;position:relative}
@@ -469,22 +478,17 @@
 </section>
 
 <!-- TESTIMONIAL -->
-<section class="wrap testimonial">
+<section class="wrap treviews">
   <p class="eyebrow" data-t="testi.eyebrow"></p>
-  <blockquote class="tquote">
-    <span class="qmark" aria-hidden="true">&#8220;</span>
-    <p data-t="testi.quote"></p>
-    <cite>&#8212; <span data-t="testi.by"></span></cite>
-  </blockquote>
-  <div class="tmore">
-    <blockquote class="tquote">
-      <p data-t="q.ds"></p>
-      <cite>&#8212; <span data-t="q.ds.by"></span></cite>
-    </blockquote>
-    <blockquote class="tquote">
-      <p data-t="q.eh"></p>
-      <cite>&#8212; <span data-t="q.eh.by"></span></cite>
-    </blockquote>
+  <div class="tgrid">
+    <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="testi.quote"></p>
+      <footer><b>Gino</b><span>Patagonia Villa</span></footer></figure>
+    <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="q.ds"></p>
+      <footer><b>Sol</b><span>Destino Sur Hotel &amp; Spa</span></footer></figure>
+    <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="q.eh"></p>
+      <footer><b>Paula Andrada</b><span>EH Aparts</span></footer></figure>
+    <figure class="tcard"><span class="qmark" aria-hidden="true">&#8220;</span><p data-t="q.az"></p>
+      <footer><b>Ayelén</b><span>Aizeder EcoContainer</span></footer></figure>
   </div>
 </section>
 
@@ -780,6 +784,7 @@ const T = {
     "q.ds.by":"Sol · Destino Sur Hotel & Spa",
     "q.eh":"Trabajar con Réka y Dávid fue una experiencia excelente. Desde el primer momento entendieron perfectamente lo que queríamos transmitir con EH Aparts y lograron captar la esencia de nuestra marca en cada imagen. Reflejaron en las fotografías mucho más que un espacio: la identidad, la calidez y la experiencia que queremos ofrecer a nuestros huéspedes. ¡Los recomendamos totalmente!",
     "q.eh.by":"Paula Andrada · EH Aparts",
+    "q.az":"Trabajar con Réka y Dávid fue increíblemente fácil. Fueron muy amables y respetuosos con nuestro espacio, ¡y nos encantan las fotos finales! Supieron exactamente cómo trabajar con la luz natural y captaron la verdadera esencia de nuestro pequeño lugar en el bosque. Se nota tanto la calidad de su trabajo como el cuidado que pusieron en todo lo que entregaron. Estamos muy contentos con el resultado y los recomendaríamos sin dudarlo.",
     "close.title":"¿Quieren crear algo juntos?",
     "close.p":"Escríbannos. Sin compromiso, solo una charla.",
     "close.email":"Escríbannos",
@@ -896,6 +901,7 @@ const T = {
     "q.ds.by":"Sol · Destino Sur Hotel & Spa",
     "q.eh":"Working with Réka and Dávid was an excellent experience. From the very first moment they understood what we wanted to convey with EH Aparts and captured the essence of our brand in every image. They reflected much more than a space: the identity, the warmth and the experience we want to offer our guests. We fully recommend them!",
     "q.eh.by":"Paula Andrada · EH Aparts",
+    "q.az":"Working with Réka and Dávid was incredibly easy. They were so kind and respectful of our space, and we absolutely love the final photos! They knew exactly how to work with the natural light and captured the true essence of our little place in the forest. You can feel both the quality of their work and the care they put into everything they delivered. We’re so happy with the result and would recommend them without hesitation.",
     "close.title":"Want to create something together?",
     "close.p":"Write to us. No obligations, just a conversation.",
     "close.email":"Email us",
