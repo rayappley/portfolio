@@ -275,6 +275,10 @@
   .tquote .qmark{font-family:"Fraunces",serif;font-size:64px;line-height:.5;color:var(--accent);opacity:.4;display:block;margin-bottom:6px}
   .tquote p{font-family:"Fraunces",serif;font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,26px);line-height:1.5;color:var(--ink);margin:0 auto;max-width:46ch}
   .tquote cite{display:block;margin-top:24px;font-style:normal;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .tmore{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px;padding-top:34px;border-top:1px solid var(--hair);text-align:left}
+  .tmore .tquote p{font-size:17px;line-height:1.55;max-width:none;margin:0}
+  .tmore .tquote cite{margin-top:14px;font-size:12px}
+  @media (max-width:720px){ .tmore{grid-template-columns:1fr;gap:26px} }
   .idea-style{margin-top:16px;font-size:15px;color:var(--ink);max-width:62ch;border-left:2px solid var(--accent);padding-left:14px}
   .next-cols{display:grid;grid-template-columns:1fr;gap:28px;margin-top:6px}
   .next-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
@@ -472,6 +476,16 @@
     <p data-t="testi.quote"></p>
     <cite>&#8212; <span data-t="testi.by"></span></cite>
   </blockquote>
+  <div class="tmore">
+    <blockquote class="tquote">
+      <p data-t="q.ds"></p>
+      <cite>&#8212; <span data-t="q.ds.by"></span></cite>
+    </blockquote>
+    <blockquote class="tquote">
+      <p data-t="q.eh"></p>
+      <cite>&#8212; <span data-t="q.eh.by"></span></cite>
+    </blockquote>
+  </div>
 </section>
 
 <!-- CLOSE -->
@@ -759,9 +773,13 @@ const T = {
     "get.3":"Fechas que se acomoden a ustedes, porque nuestro calendario es flexible",
     "video.h":"Y tal vez video",
     "video.p":"El video no entra en el trato por defecto. Si la colaboración de fotos sale bien para ambos y se siente bien, con gusto hablamos de filmar algo juntos después.",
-    "testi.eyebrow":"LO QUE DIJO NUESTRO ANFITRIÓN",
+    "testi.eyebrow":"LO QUE DIJERON NUESTROS ANFITRIONES",
     "testi.quote":"El servicio de fotografía que realizaron para nuestras cabañas y apartamentos fue absolutamente espectacular, trabajando con total autonomía, profesionalismo y gran eficiencia. Se nota que Réka y Dávid tienen amplia experiencia en el rubro, ya que el resultado final no decepcionó en lo más mínimo. ¡Recomiendo su trabajo de todo corazón a cualquiera que quiera elevar la presentación de su propiedad!",
     "testi.by":"Gino · Patagonia Villa",
+    "q.ds":"Réka y Dávid fueron una de las mejores colaboraciones que hemos tenido en el hotel. Profesionales, atentos, lograron entender a la perfección lo que estábamos necesitando. Las imágenes que nos brindaron fueron realmente excelentes. Sin lugar a dudas los volveríamos a recibir y los recomendamos.",
+    "q.ds.by":"Sol · Destino Sur Hotel & Spa",
+    "q.eh":"Trabajar con Réka y Dávid fue una experiencia excelente. Desde el primer momento entendieron perfectamente lo que queríamos transmitir con EH Aparts y lograron captar la esencia de nuestra marca en cada imagen. Reflejaron en las fotografías mucho más que un espacio: la identidad, la calidez y la experiencia que queremos ofrecer a nuestros huéspedes. ¡Los recomendamos totalmente!",
+    "q.eh.by":"Paula Andrada · EH Aparts",
     "close.title":"¿Quieren crear algo juntos?",
     "close.p":"Escríbannos. Sin compromiso, solo una charla.",
     "close.email":"Escríbannos",
@@ -871,9 +889,13 @@ const T = {
     "get.3":"Dates that work around you, since our schedule is flexible",
     "video.h":"And maybe video",
     "video.p":"Video isn\u2019t part of the trade by default. If the photo collaboration goes well for both of us and it feels right, we\u2019re happy to talk about filming something together afterwards.",
-    "testi.eyebrow":"WHAT OUR HOST SAID",
+    "testi.eyebrow":"WHAT OUR HOSTS SAID",
     "testi.quote":"The photography service provided for our cabins and apartments was absolutely spectacular, operating with total autonomy, professionalism, and high efficiency. It is clear that Réka and Dávid have extensive industry experience, as the final results did not disappoint in the slightest. I completely and wholeheartedly recommend their work to anyone looking to elevate their property listings!",
     "testi.by":"Gino · Patagonia Villa",
+    "q.ds":"Réka and Dávid were one of the best collaborations we've had at the hotel. Professional and attentive, they understood perfectly what we needed. The images they delivered were truly excellent. We would happily host them again and we recommend them.",
+    "q.ds.by":"Sol · Destino Sur Hotel & Spa",
+    "q.eh":"Working with Réka and Dávid was an excellent experience. From the very first moment they understood what we wanted to convey with EH Aparts and captured the essence of our brand in every image. They reflected much more than a space: the identity, the warmth and the experience we want to offer our guests. We fully recommend them!",
+    "q.eh.by":"Paula Andrada · EH Aparts",
     "close.title":"Want to create something together?",
     "close.p":"Write to us. No obligations, just a conversation.",
     "close.email":"Email us",
